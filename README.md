@@ -6,13 +6,13 @@ l'objectif est de faire un test de plusieurs techniques pour jouer sur un instru
 
 ## les choix techniques pour les accords
 
-### servommoteurs
-en utilisant un pca9685 nous pouvons facilement controller 16 servomoteurs
-
 ### solenoides
 avec un mpc23017 et deux uln2803, nous pouvons controller 16 solenoides (500mA par solenoides max avec le uln2803) 
 il faut placer des systemes de doigts entre les frettes qui viendrons tirer la corde vers le manche et faire l'accord voulu. 
 il faudra absolument penser a utiliser des systeme pour amortir les deplacement ON/OFF de chaque solenoide pour limiter les bruits mecanique (de la mousse/tissus ou encore adapter la tension d'alimentation) 
+
+### servommoteurs
+en utilisant un pca9685 nous pouvons facilement controller 16 servomoteurs, nous pouvons utiliser la meme methode qu'avec des solenoides sans les systeme d'amortissement.
 
 ### moteurs pas a pas
 avec un driver et un moteur pas a pas, on peut faire un reglage des positions via software.
