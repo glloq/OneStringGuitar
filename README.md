@@ -24,13 +24,15 @@ on peut aussi utiliser le servomoteur pour etoufer la note en remetant le pick c
 ![grattage servo](https://github.com/glloq/OneStringGuitar/blob/main/img/grattage%20servo.png)
 
 ## Moteur 
-on peut utiliser soit un moteur cc que l'on active pendant un certain temps soit utiliser un moteur pas a pas pour plus de precision.
+on peut utiliser soit un moteur cc que l'on active pendant un certain temps soit utiliser un moteur pas a pas pour plus de precision (mais ca augmente le couts et la complexité) 
 
 ## solenoides
+
 la technique la plus simple est d'utiliser deux solenoides opposé l'un a l'autre et d'alterner l'activation des deux solenoides pour gratter la corde.
 ![grattage 2 solenoides](https://github.com/glloq/OneStringGuitar/blob/main/img/grattage%202%20solenoides.png)
 
-on peut aussi utiliser un seul solenoide pour gratter la corde mais il faut utiliser un systeme macanique qui complexifie le systeme
+on peut aussi utiliser un seul solenoide pour gratter la corde mais il faut utiliser un systeme mecanique qui complexifie le systeme afin d'eviter de gatter les corde 2 fois.
+
 
 # la position des frettes
 
