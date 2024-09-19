@@ -2,7 +2,7 @@
 
 l'idée est de faire un systeme qui viend jouer d'un instrument a corde gratée de type guitare, basse etc 
 
-l'objectif est de faire un test de plusieurs techniques pour jouer sur un instrument a une corde afin d'avoir une base adaptable jusqu'a 4 a 6 cordes dans l'avenir
+l'objectif est de faire un test de plusieurs techniques pour jouer sur un instrument a une corde afin d'avoir une base adaptable jusqu'a 4 ou 6 cordes dans l'avenir
 
 ## les choix techniques pour les accords
 
@@ -10,16 +10,21 @@ l'objectif est de faire un test de plusieurs techniques pour jouer sur un instru
 en utilisant un pca9685 nous pouvons facilement controller 16 servomoteurs
 
 ### solenoides
-avec un mpc23017 et deuxs uln2803, nous pouvons controller 16 solenoides (500mA par solenoides max avec le uln2803) 
+avec un mpc23017 et deux uln2803, nous pouvons controller 16 solenoides (500mA par solenoides max avec le uln2803) 
+il faut placer des systemes de doigts entre les frettes qui viendrons tirer la corde vers le manche et faire l'accord voulu. 
+il faudra absolument penser a utiliser des systeme pour amortir les deplacement ON/OFF de chaque solenoide pour limiter les bruits mecanique (de la mousse/tissus ou encore adapter la tension d'alimentation) 
 
 ### moteurs pas a pas
 avec un driver et un moteur pas a pas, on peut faire un reglage des positions via software.
 on a deux facons de faire : 
-avec un doigt toujour en appui   
+avec un doigt toujour en appui 
 ![simple contact](https://github.com/glloq/OneStringGuitar/blob/main/img/simpleContact.png)
 
-ou avec un systeme mecanique ou electromecanique pour deplacer le doigt sur un rail lineaire
+ou avec un systeme mecanique ou electromecanique pour decendre le doigt sur un rail lineaire
 ![guide lineaire](https://github.com/glloq/OneStringGuitar/blob/main/img/guide%20lineaire.png)
+dans ce cas nous pouvons utiliser un systeme actioné via un servomoteur ou un solenoide directement sur le patin du rail lineaire ou deporté en fixe (pour eviter des cables en mouvements) 
+
+
 
 ## les choix techniques pour le grattage
 
@@ -41,7 +46,7 @@ on peut aussi utiliser un seul solenoide pour gratter la corde mais il faut util
 
 # la position des frettes
 
-Pour déterminer les positions des frettes sur une corde d'un violoncelle en fonction de sa longueur, nous utilisons la règle des frettes, qui suit une division logarithmique. La position de chaque frette est calculée en utilisant la formule suivante :
+Pour déterminer les positions des frettes sur une corde d'unu guitare en fonction de sa longueur, nous utilisons la règle des frettes, qui suit une division logarithmique. La position de chaque frette est calculée en utilisant la formule suivante :
  
 d_n = L - (L / (2 ^ (n / 12)))
 
