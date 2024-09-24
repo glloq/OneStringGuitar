@@ -12,10 +12,8 @@ il faut placer des systemes de doigts entre les frettes qui viendrons tirer la c
 il faudra absolument penser a utiliser des systeme pour amortir les deplacement ON/OFF de chaque solenoide pour limiter les bruits mecanique (de la mousse/tissus ou encore adapter la tension d'alimentation) 
 <img src="https://raw.githubusercontent.com/glloq/Orchestrion_ukulele/main/img/doigts.png" alt="Your image title" width=40% height=40%/>
 
-
 ### servommoteurs
 en utilisant un pca9685 nous pouvons facilement controller 16 servomoteurs, nous pouvons utiliser la meme methode qu'avec des solenoides sans les systeme d'amortissement.
-
 
 ### moteurs pas a pas
 avec un driver et un moteur pas a pas, on peut faire un reglage des positions via software.
@@ -27,59 +25,37 @@ ou avec un systeme mecanique ou electromecanique pour decendre le doigt sur un r
 ![guide lineaire](https://github.com/glloq/OneStringGuitar/blob/main/img/guide%20lineaire.png)
 dans ce cas nous pouvons utiliser un systeme actioné via un servomoteur ou un solenoide directement sur le patin du rail lineaire ou deporté en fixe (pour eviter des cables en mouvements) 
 
-
-
 ## les choix techniques pour le grattage
 
-## Servomoteur 
+## Servomoteurs
 on peut utiliser un servomoteur pour gratter en direct ou en deporté en alternant entre 2 angles entre chaque grattage de la corde.
 on peut aussi utiliser le servomoteur pour etoufer la note en remetant le pick contre la corde a la reception d'un message noteOff.   
 ![grattage servo](https://github.com/glloq/OneStringGuitar/blob/main/img/grattage%20servo.png)
 
-## Moteur 
-on peut utiliser soit un moteur cc que l'on active pendant un certain temps soit utiliser un moteur pas a pas pour plus de precision (mais ca augmente le couts et la complexité) 
-
 ## solenoides
-
 la technique la plus simple est d'utiliser deux solenoides opposé l'un a l'autre et d'alterner l'activation des deux solenoides pour gratter la corde.   
 ![grattage 2 solenoides](https://github.com/glloq/OneStringGuitar/blob/main/img/grattage%202%20solenoides.png)
 
 on peut aussi utiliser un seul solenoide pour gratter la corde mais il faut utiliser un systeme mecanique qui complexifie le systeme afin d'eviter de gatter les corde 2 fois.
 
 
+# les differentes version de code possible
 
-# logique de selection d'une corde 
+il est plus simple de combiner les meme type d'actionneurs (solenoides ou servomoteurs) afin d'avoir le meme temps de reaction entre l'accord et le grattage.
+
+ca nous donne donc 3 familles de codes à faire :
+- utiliser des solenoides
+- utiliser des servomoteurs
+- utilser des moteurs pas à pas
+ - sans actionneur
+ - avec un servomoteur pour descendre le doigts
+ - avec un solenoide pour descendre le doigts
+
+## comparaison des solutions
 
 
 
 
 
 
-
-
-
-
-
-# la position des frettes
-
-Pour déterminer les positions des frettes sur une corde d'unu guitare en fonction de sa longueur, nous utilisons la règle des frettes, qui suit une division logarithmique. La position de chaque frette est calculée en utilisant la formule suivante :
- 
-d_n = L - (L / (2 ^ (n / 12)))
-
-ou:
-- `d_n` est la distance entre le sillet et la n-ième frette,
-- `L` est la longueur vibrante de la corde (du sillet au chevalet),
-- `n` est le numéro de la frette.
-
-## Longueurs des Cordes Vibrantes pour Instruments à Cordes grattée
-
-| Instrument         | Longueur de corde vibrante (en cm) |
-|--------------------|------------------------------------|
-| Guitare classique | 65 - 66                    |
-| Guitare acoustique| 63 - 65                    |
-| Guitare électrique| 62 - 64                    |
-| Mandoline         | 35 - 40                    |
-| Banjo             | 60 - 62                    |
-| Ukulélé soprano   | 33 - 35                    |
-| Ukulélé ténor     | 40 - 45                    |
 
