@@ -46,7 +46,7 @@ on peut tuiliser des solenoides ou des servomoteurs en fonction
 # les differentes version de code possible
 
 il y a donc plusieurs familles de code a faire, je vais ajouter les liens vers chaque repo qui contient les details technique de chaque solution
-- utiliser des solenoides
+- [utiliser des solenoides](https://github.com/glloq/Orchestrion_Plucked_Strings_Solenoids/tree/main)
 - utiliser des servomoteurs
 - utilser des moteurs pas à pas
   - sans actionneur
