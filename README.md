@@ -45,13 +45,13 @@ on peut tuiliser des solenoides ou des servomoteurs en fonction
 
 # les differentes version de code possible
 
-ca nous donne donc 3 familles de codes à faire :
+il y a donc plusieurs familles de code a faire, je vais ajouter les liens vers chaque repo qui contient les details technique de chaque solution
 - utiliser des solenoides
 - utiliser des servomoteurs
 - utilser des moteurs pas à pas
   - sans actionneur
-  - avec un servomoteur pour descendre le doigts
-  - avec un solenoide pour descendre le doigts
+  - avec servomoteurs
+  - avec solenoides
 
 
 
