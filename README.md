@@ -55,11 +55,13 @@ les solenoides :
 - la solution avec le moins delais 
 - revient cher avec le cout des solenoides
 - relativement bruyant et chauffe => il faut isoler les bruits mecanique et utiliser un systeme de dissipation de la chaleur
+  
 les servomoteurs :
 - delais d'action assez elevée
 - prend plus de place
 - le plus simple a coder
-le moteur pas a pas
+    
+le moteur pas a pas :
 - la solution la plus simple a adapter
 - le plus gros delais d'action ( et variable en fct de la distance ?) 
 
